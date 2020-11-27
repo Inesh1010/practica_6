@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	MovableRectangle movableRectangle = new MovableRectangle(-2, 10, 5, 7, 5, 9);
+	    MovableRectangle movableRectangle = new MovableRectangle(5, 15, 3, 4, 6, 12);
         System.out.println(movableRectangle);
         movableRectangle.moveDown();
         movableRectangle.moveLeft();

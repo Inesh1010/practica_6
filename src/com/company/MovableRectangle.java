@@ -15,7 +15,7 @@ public class MovableRectangle extends Rectangle implements  Movable {
         leftUpper = new MovablePoint(xl, yl, xSpeed, ySpeed);
         rightDown = new MovablePoint(xr, yr, xSpeed, ySpeed);
         this.width = rightDown.x - leftUpper.x;
-        this.height = leftUpper.y - rightDown.y;
+        this.length = leftUpper.y - rightDown.y;
     }
 
     public MovableRectangle(String color, boolean filled, int xl, int yl, int xr, int yr, int xSpeed, int ySpeed) {
@@ -24,7 +24,7 @@ public class MovableRectangle extends Rectangle implements  Movable {
         leftUpper = new MovablePoint(xl, yl, xSpeed, ySpeed);
         rightDown = new MovablePoint(xr, yr, xSpeed, ySpeed);
         this.width = rightDown.x - leftUpper.x;
-        this.height = leftUpper.y - rightDown.y;
+        this.length = leftUpper.y - rightDown.y;
     }
 
     @Override
@@ -53,13 +53,7 @@ public class MovableRectangle extends Rectangle implements  Movable {
 
     @Override
     public String toString() {
-        return "MovableRectangle{" +
-                "leftUpper=" + leftUpper +
-                ", rightDown=" + rightDown +
-                ", width=" + width +
-                ", height=" + height +
-                ", color='" + color + '\'' +
-                ", filled=" + filled +
-                '}';
+        return "MovableRectangle{" + "leftUpper=" + leftUpper + ", rightDown=" + rightDown + ", width=" + width +
+                ", height=" + length + ", color='" + color + '\'' + ", filled=" + filled + '}';
     }
 }

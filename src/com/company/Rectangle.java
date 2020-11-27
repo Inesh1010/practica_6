@@ -3,30 +3,30 @@ package com.company;
 public class Rectangle extends Shape {
 
     protected double width;
-    protected double height;
+    protected double length;
 
      public Rectangle(){
         super();
         width = 0;
-        height = 0;
+         length = 0;
     }
 
     public Rectangle(String color, boolean filled) {
          super(color, filled);
          this.width = 0;
-         this.height = 0;
+         this.length = 0;
     }
 
-    public Rectangle(double width, double height){
+    public Rectangle(double width, double length){
        super();
         this.width = width;
-        this.height = height;
+        this.length = length;
     }
 
-    public Rectangle(double width, double height, String color, boolean filled){
+    public Rectangle(double width, double length, String color, boolean filled){
         super(color,  filled);
         this.width = width;
-        this.height = height;
+        this.length = length;
     }
 
 
@@ -41,30 +41,25 @@ public class Rectangle extends Shape {
 
     public double getHeight() {
 
-         return height;
+         return length;
     }
 
-    public void setHeight(double height) {
+    public void setLength(double height) {
 
-         this.height = height;
+         this.length = height;
     }
     @Override
     public double getArea(){
 
-         return width* height;
+         return width* length;
     }
 
     public double getPerimetr(){
-        return 2*(width + height);
+        return 2*(width + length);
         }
 
     @Override
     public String toString() {
-        return "Rectangle{" +
-                "width=" + width +
-                ", length=" + height +
-                ", color='" + color + '\'' +
-                ", filled=" + filled +
-                '}';
+        return "Rectangle{" + "width=" + width + ", length=" + length + ", color='" + color + '\'' + ", filled=" + filled + '}';
     }
 }
